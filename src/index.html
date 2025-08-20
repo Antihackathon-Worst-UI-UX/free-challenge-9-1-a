@@ -4,15 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
     <title>Document</title>
 </head>
 
 <body>
 
-    <div class="window">
-        Hola!
+    <div class="m-3" style="background-color: #c1c1c1; height: 40rem; border-color: blue; border-style: solid;">
+        <div class="title-bar">
+            <div class="title-bar-text">En los dias oscuros, no hay luz. Y en los días luminosos, sí...</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="text-center">
+            <div class="row text-center">
+                <div class="col-5 mt-3 mx-3">
+                    <button id="1">
+                        Hola!
+                    </button>
+                </div>
+                <div class="col-6 mt-3 d-flex justify-content-center">
+                    <button id="2" style="display: none;">
+                        ¿Cómo estás?
+                    </button>
+                </div>
+            </div>
+            <div class="container m-5" style=" height: 20rem;">
+                <img id="white" src="sukinapan.webp" alt="White Image">
+            </div>
+            <div class="row">
+                <div class="col-5 mt-5 d-flex justify-content-center">
+                    <button id="3" style="display: none;">
+                        ¡Espero que estés teniendo un gran día!
+                    </button>
+                </div>
+                <div class="col-6 mt-5 mx-3  d-flex justify-content-center">
+                    <button id="4" style="display: none;">
+                        Porque yo no !
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="m-3 text-center">
+        <span class="px-3" style="color:aliceblue; background-color: blue;">Art by @sukinapan</span>
+    </footer>
     </div>
 
 </body>
+<script src="index.js"></script>
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
 
 </html>
