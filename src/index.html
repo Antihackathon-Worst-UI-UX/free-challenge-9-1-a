@@ -14,14 +14,15 @@
 
 <body>
 
-    <div class="m-3" style="background-color: #c1c1c1; height: 40rem; border-color: blue; border-style: solid;">
+    <div id="window" class="m-3"
+        style="background-color: #c1c1c1; height: 40rem; border-color: blue; border-style: solid;">
         <div class="title-bar">
             <div class="title-bar-text">En los dias oscuros, no hay luz. Y en los días luminosos, sí...</div>
             <div class="title-bar-controls">
-                <button aria-label="Close"></button>
+                <button id="fin" aria-label="Close"></button>
             </div>
         </div>
-        <div class="text-center">
+        <div id="center" class="text-center">
             <div class="row text-center">
                 <div class="col-5 mt-3 mx-3">
                     <button id="1">
@@ -34,8 +35,44 @@
                     </button>
                 </div>
             </div>
-            <div class="container m-5" style=" height: 20rem;">
+            <div id="end" class="container m-5" style=" height: 20rem;">
                 <img id="white" src="sukinapan.webp" alt="White Image">
+                <div id="after" style="display: none;" class="row">
+                    <div id="pop-up" class="window col-4 me-5">
+                        <div class="title-bar">
+                            <div class="title-bar-text">A Window With A Status Bar 🧐</div>
+                            <div class="title-bar-controls">
+                                <button id="ventana-close" aria-label="Close"></button>
+                            </div>
+                        </div>
+                        <div class="window-body">
+                            <p> Vamos a tener que hacer algunas cosas:</p>
+                            <p>... yo tampoco quiero, pero ... </p>
+                            <ul>
+                                <li>Ingresar tu nombre</li>
+                                <li>Ingresar (?)</li>
+                                <li>Salir &check; </li>
+                            </ul>
+                        </div>
+                        <div class="status-bar">
+                            <p class="status-bar-field">Press F1 for help (?) </p>
+                            <p class="status-bar-field">CPU Usage: π%</p>
+                        </div>
+                    </div>
+
+                    <div class="field-row col-5">
+                        <label for="range25">Ingresa tu(?) nombre</label>
+                        <div class="is-vertical">
+                            <input id="range25" class="has-box-indicator mx-2" type="range" min="1" max="12" step="1"
+                                value="5" />
+                        </div>
+                        <div class="name-display px-3" id="nombre_mostrar">
+                            Tu nombre es ... <span id="nombre"></span>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
             <div class="row">
                 <div class="col-5 mt-5 d-flex justify-content-center">
@@ -51,9 +88,13 @@
             </div>
         </div>
     </div>
-    <footer class="m-3 text-center">
-        <span class="px-3" style="color:aliceblue; background-color: blue;">Art by @sukinapan</span>
+    <footer id="foo" class="m-3 text-center">
+        <span class="px-3" style="color:aliceblue; background-color: blue;">Art by
+            <a href="https://www.instagram.com/neo_sukinapan/" style="color: white;">@sukinapan</a>
+        </span>
     </footer>
+
+
     </div>
 
 </body>
