@@ -2,6 +2,7 @@ body {
   background-image: url("fondo.jpg");
   background-size: repeat;
   background-position: center;
+  font-family: "MS Sans Serif", sans-serif;
 }
 
 img {

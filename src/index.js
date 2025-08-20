@@ -43,6 +43,14 @@ fin.addEventListener("click", () => {
 
   // poner mensaje que dice que perdio ...
   const darthvader = document.createElement("img");
+  const refresh = document.createElement("button");
+  refresh.textContent = "here we go again...";
+  refresh.addEventListener("click", () => {
+    location.reload();
+  });
+  refresh.style.backgroundColor = "black";
+  refresh.style.color = "white";
+  refresh.className = "col-6";
   darthvader.src = "darth-vader.jpeg";
   darthvader.style.width = "80%";
   const message = document.createElement("div");
@@ -51,8 +59,11 @@ fin.addEventListener("click", () => {
   message.style.color = "white";
   message.style.fontSize = "2rem";
   message.style.textAlign = "center";
+  message.style.marginTop = "2rem";
+
   body.appendChild(message);
   message.appendChild(darthvader);
+  message.appendChild(refresh);
 });
 
 element1.addEventListener("click", () => {
@@ -79,6 +90,8 @@ element4.addEventListener("click", () => {
   }, 1500);
 });
 white_walter.addEventListener("click", () => {
+  const audio = new Audio("lobo.mp3");
+  audio.play();
   setTimeout(() => {
     element1.style.display = "none";
     element2.style.display = "none";
@@ -89,7 +102,7 @@ white_walter.addEventListener("click", () => {
     ventana.style.boxShadow = "0 10px 10px rgba(0, 0, 0, 0.5)";
     pop_up.style.display = "flex";
     pop_up.style.zIndex = "5";
-  }, 500);
+  }, 3500);
 });
 
 let alertShown = false;
@@ -119,28 +132,46 @@ slider.addEventListener("input", () => {
   nombre.style.color = colors[value - 1] || "black";
   nombre.style.fontStyle = "bold";
   nombre.style.fontSize = "0.7rem";
-  nombre.style.fontFamily = "monospace";
+  nombre.style.fontFamily = "MS Sans Serif";
 
-  if (colors[value - 1] === "orange") {
-    if (!ganoMostrado) {
-      ganoMostrado = true;
-      mostrarPantallaGanador();
+  // wait some time to check if the color is orange
+  setTimeout(() => {
+    if (colors[value - 1] === "orange") {
+      if (!ganoMostrado) {
+        ganoMostrado = true;
+        mostrarPantallaGanador();
+      }
     }
-  }
+  }, 2000);
 });
 
 function mostrarPantallaGanador() {
   // Ocultar todo lo demás
   const termino_del_juego = document.createElement("h2");
+  const aux = document.createElement("div");
   const ganador = document.createElement("button");
   const nevergonnagiveup = document.createElement("a");
+
   nevergonnagiveup.textContent = "Premio";
+  nevergonnagiveup.style.textDecoration = "none";
+  nevergonnagiveup.style.color = "black";
   nevergonnagiveup.href = "https://youtu.be/dQw4w9WgXcQ?si=WIzwfgewok9_5ANw";
+  nevergonnagiveup.target = "_blank";
+  aux.appendChild(ganador);
   ganador.appendChild(nevergonnagiveup);
+
+  ganador.addEventListener("click", () => {
+    //open link new tab
+    window.open(nevergonnagiveup.href, "_blank");
+  });
+
   termino_del_juego.textContent =
     "Felicidades! (Has ganado, pero a qué costo ...)";
+  termino_del_juego.style.fontFamily = "MS Sans Serif";
   pop_up.style.display = "none";
-  termino_del_juego.style.fontSize = "4rem";
+  aux.className = "container justify-content-center text-center";
+  termino_del_juego.style.fontSize = "2.5rem";
+  termino_del_juego.className = "pb-5";
   end.appendChild(termino_del_juego);
-  end.appendChild(ganador);
+  end.appendChild(aux);
 }

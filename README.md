@@ -24,7 +24,7 @@ Tu objetivo será crear una Interfaz Grafica absurdamente incomoda, frustrante y
 ## Entrega ✅
 
 - Este repositorio será revisado por los jueces al termino de la competencia: _Martes 19 Agosto - 23:59_
-- Link Deploy = [\[Remplazar por el link donde tenga hosteada su UI\]](https://free-challenge-9-1-a.pages.dev/)
+- Link Deploy = [\[tamo redy jefe\]](https://free-challenge-9-1-a.pages.dev/)
 
 ---
 
