@@ -133,8 +133,8 @@ function mostrarPantallaGanador() {
   // Ocultar todo lo demás
   const termino_del_juego = document.createElement("h2");
   const ganador = document.createElement("button");
-  ganador.innerHTML = "Premio";
   const nevergonnagiveup = document.createElement("a");
+  nevergonnagiveup.textContent = "Premio";
   nevergonnagiveup.href = "https://youtu.be/dQw4w9WgXcQ?si=WIzwfgewok9_5ANw";
   ganador.appendChild(nevergonnagiveup);
   termino_del_juego.textContent =
